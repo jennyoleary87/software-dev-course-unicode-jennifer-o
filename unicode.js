@@ -25,7 +25,6 @@ let codePointI = inputString.charCodeAt(1)
 let sumCodePoints = codePointH + codePointI;
 console.log(sumCodePoints) // 177
 
-
 let hLine = "---------------------------------------";
 console.log(hLine)  // to visually differentiate between exercise problems
 /*
@@ -67,12 +66,13 @@ let index2 = 2;
 
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
+-- personal note ... instructions say |67 - 116|=16 ... but thats not how math works ... 49 is correct --
 */
-let inputString = "Cat";
+let inputStringCat = "Cat";
 let index1 = 0;
 let index2 = 2;
-
-console.log()
+let codePointDifference = Math.abs(inputStringCat.charCodeAt(index1) - inputStringCat.charCodeAt(index2));
+console.log(codePointDifference) // 49
 
 console.log(hLine)  // to visually differentiate between exercise problems
 /*
@@ -112,15 +112,19 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // 67
+let thirdCodePoint = inputString1.charCodeAt(2); // 100
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let codes = [72, 101, 108, 108, 111];
+let wordFromCodePoints = String.fromCharCode(codes[0]) + String.fromCharCode(codes[1]) + String.fromCharCode(codes[2]) + String.fromCharCode(codes[3]) + String.fromCharCode(codes[4]); // Hello
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let inputLaunchFirst = inputString2.charCodeAt(0);
+let inputLaunchLast = inputString2.charCodeAt(inputString2.length - 1);
+let inputLaunchMiddle = inputString2.substring(1, inputString2.length - 1);
+let swappedString = String.fromCharCode(inputLaunchLast) + inputLaunchMiddle + String.fromCharCode(inputLaunchFirst); // hauncL
 
 // Log all results
 console.log({
