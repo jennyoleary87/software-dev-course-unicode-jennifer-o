@@ -1,4 +1,6 @@
 /*
+03/12/2025
+Practice: Stringing Characters Together - 7: Converting from Character to Unicode and Back
 
 Practice Problem #1
 
@@ -15,7 +17,18 @@ let inputString = "Hi";
 
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
+*/
 
+let inputString = "Hi";
+let codePointH = inputString.charCodeAt(0)
+let codePointI = inputString.charCodeAt(1)
+let sumCodePoints = codePointH + codePointI;
+console.log(sumCodePoints) // 177
+
+
+let hLine = "---------------------------------------";
+console.log(hLine)  // to visually differentiate between exercise problems
+/*
 Exercise 2: Generate a String from Two Code Points
 Objective: Take two numeric Unicode code points,
 convert them to characters using String.fromCharCode,
@@ -31,7 +44,14 @@ let codePoint2 = 66;
 
 Expected Output:
 combinedString: "AB" // 65 = 'A', 66 = 'B', combined = "AB"
+*/
+let codePoint1 = 65;
+let codePoint2 = 66;
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+console.log(combinedString) // AB
 
+console.log(hLine)  // to visually differentiate between exercise problems
+/*
 Exercise 3: Find the Character Difference
 Objective: Extract the Unicode code points of two given characters from a string
 and calculate the absolute difference between them.
@@ -47,9 +67,15 @@ let index2 = 2;
 
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
+*/
+let inputString = "Cat";
+let index1 = 0;
+let index2 = 2;
 
+console.log()
 
-
+console.log(hLine)  // to visually differentiate between exercise problems
+/*
 Practice Problem #2
 
 Objective
